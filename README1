@@ -1,0 +1,121 @@
+# Crowdfunding Campaign Success Prediction
+
+## Project Overview
+
+This project aims to predict the success of crowdfunding campaigns using machine learning classification algorithms. The dataset contains campaign details such as goal amount, raised amount, campaign duration, number of backers, category, country, and other relevant features.
+
+The main objective is to build, evaluate, and compare different classification models to identify the best-performing model for predicting campaign success.
+
+## Dataset
+
+**Dataset Name:** Crowdfunding Campaign Dataset
+
+**Dataset Link:** [Crowdfunding Campaign Dataset](https://raw.githubusercontent.com/GeethaGunasekaran1/Dataset_rep/refs/heads/main/crowdfunding.csv)
+
+**Target Variable:** `IsSuccessful`
+
+### Features
+
+* GoalAmount
+* RaisedAmount
+* DurationDays
+* NumBackers
+* Category
+* LaunchMonth
+* Country
+* Currency
+* OwnerExperience
+* VideoIncluded
+* SocialMediaPresence
+* NumUpdates
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Google Colab / Jupyter Notebook
+
+## Project Workflow
+
+### Task 1: Data Preprocessing
+
+* Loaded and inspected the dataset.
+* Checked missing values and duplicate records.
+* Handled missing values.
+* Removed unnecessary ID columns.
+* Encoded categorical variables.
+* Selected important features using SelectKBest.
+* Split the data into training and testing sets.
+* Applied feature scaling where required.
+
+### Task 2: Classification Model Building
+
+Built and trained the following classification models:
+
+* Random Forest Classifier
+* K-Nearest Neighbors (KNN)
+* Decision Tree Classifier
+* Gaussian Naive Bayes
+* Support Vector Machine (SVM)
+
+Different model parameters were tested to improve performance.
+
+### Task 3: Model Evaluation
+
+Evaluated the models using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+
+Training accuracy and testing accuracy were compared to understand model performance and identify possible overfitting.
+
+### Task 4: Cross-Validation and Hyperparameter Tuning
+
+* Applied 5-fold cross-validation.
+* Used GridSearchCV to tune model hyperparameters.
+* Identified the best parameter combinations for each classification model.
+* Compared cross-validation accuracy across models.
+
+### Task 5: Model Comparison and Selection
+
+* Compared all five classification models using evaluation metrics.
+* Analysed model strengths and weaknesses.
+* Identified the best-performing model based on evaluation results.
+* Suggested possible improvements.
+
+## Model Performance
+
+Based on the initial testing accuracy results:
+
+| Model         | Training Accuracy | Testing Accuracy |
+| ------------- | ----------------: | ---------------: |
+| Random Forest |            68.23% |           67.34% |
+| Decision Tree |            67.02% |           67.30% |
+| SVM           |            66.81% |           67.18% |
+| Naive Bayes   |            66.51% |           67.03% |
+| KNN           |            72.66% |           62.68% |
+
+**Initial Best Model:** Random Forest Classifier
+
+Random Forest achieved the highest initial testing accuracy of approximately 67.34%. The final model selection should also consider precision, recall, F1-score, and cross-validation results.
+
+## Conclusion
+
+This project demonstrates the application of machine learning classification algorithms to predict crowdfunding campaign success. Data preprocessing, feature selection, model evaluation, cross-validation, and hyperparameter tuning were performed to compare model performance.
+
+Random Forest achieved the highest initial testing accuracy among the five models. Further improvements may be possible through additional feature engineering, parameter tuning, and improved preprocessing.
+
+## Future Improvements
+
+* Perform additional feature engineering.
+* Experiment with more hyperparameter combinations.
+* Address class imbalance if present.
+* Evaluate additional classification algorithms.
+* Improve model performance using cross-validation and suitable preprocessing pipelines.
